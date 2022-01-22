@@ -15,8 +15,11 @@ public class Player {
 		this.score = 0;
 	}
 	
-	public void describe(Card card) {
-		System.out.println(this.name " plays: " + card.describe());
+	public void describe() {
+		System.out.println(name + " has the following card: ");
+		for(Card card : hand) {
+			card.describe();
+		}
 	}
 	
 	public Card flip() {
