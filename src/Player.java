@@ -16,9 +16,9 @@ public class Player {
 	}
 	
 	public void describe() {
-		System.out.println(name + " has the following card: ");
+		System.out.println(name + " has the following cards: ");
 		for(Card card : hand) {
-			card.describe();
+			card.describe(); //when should this be used? Seems like it is a lot of output.
 		}
 	}
 	
@@ -39,7 +39,7 @@ public class Player {
 	}
 	
 	public void setHand(List<Card> hand) {
-		this.hand = hand;//ask how this. works in the method
+		this.hand = hand;
 	}
 	
 	public int getScore() {

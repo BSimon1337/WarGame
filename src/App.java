@@ -18,12 +18,21 @@ public class App {
 				player2.draw(deck);
 			}
 		}
-		int round = 1;
+		
+		player1.describe();
+		System.out.println();
+		player2.describe();
+		
+		
 		for (int i = 0; i < 26; i++) {
+			System.out.println("\nRound " + (i+1));
 			Card player1Card = player1.flip();
-			player1.describe();
+			System.out.print(player1.getName() + ": ");
+			player1Card.describe();
 			Card player2Card = player2.flip();
-			player2.describe();
+			System.out.print(player2.getName() + ": ");
+			player2Card.describe();
+			
 			
 			if (player1Card.getValue() > player2Card.getValue()) {
 				player1.incrementScore();
@@ -35,11 +44,10 @@ public class App {
 				System.out.println("Round ends in a draw. No points awarded");
 			}
 			
-			round =+ 1;
 			
 			}
 		
-		System.out.println("##### Final results #####");
+		System.out.println("\n##### Final results #####");
 		System.out.println(player1.getName() + " has a score of " + player1.getScore());
 		System.out.println(player2.getName() + " has a score of " + player2.getScore());
 		
